@@ -127,6 +127,30 @@
         background: linear-gradient(90deg, #818cf8, #22d3ee);
       }
 
+      nav {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .65rem;
+        margin-top: 2rem;
+      }
+
+      nav a {
+        padding: .65rem .95rem;
+        border: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 999px;
+        color: #cbd5e1;
+        font-size: .85rem;
+        text-decoration: none;
+        transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+      }
+
+      nav a:hover, nav a:focus-visible {
+        border-color: rgba(103, 232, 249, .5);
+        color: #fff;
+        background: rgba(103, 232, 249, .08);
+      }
+
       @keyframes arrive {
         from { opacity: 0; transform: translateY(18px) scale(.985); }
         to { opacity: 1; transform: translateY(0) scale(1); }
@@ -144,6 +168,11 @@
       <h1>Hello,<span>World!</span></h1>
       <p class="message">A small page with a big welcome. Here’s to the ideas, experiments, and adventures that start with a simple hello.</p>
       <div class="signature">Made for the curious</div>
+      <nav aria-label="Main navigation">
+        <a href="hello-world.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </main>
   </body>
 </html>

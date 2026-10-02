@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111827" />
+    <title>About · Hello, World!</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0b1020; color: #f8fafc; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow-x: hidden; background: radial-gradient(ellipse at 15% 15%, rgba(99,102,241,.22), transparent 38%), radial-gradient(ellipse at 85% 80%, rgba(34,211,238,.14), transparent 35%), #0b1020; }
+      .orb { position: fixed; width: 28rem; aspect-ratio: 1; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; box-shadow: 0 0 100px rgba(99,102,241,.09), inset 0 0 80px rgba(34,211,238,.04); pointer-events: none; }
+      main { position: relative; width: min(90vw, 680px); margin: 2rem 0; padding: clamp(2rem, 7vw, 4.5rem); overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 28px; background: linear-gradient(145deg, rgba(30,41,69,.78), rgba(15,23,42,.72)); box-shadow: 0 30px 100px rgba(0,0,0,.45), inset 0 1px rgba(255,255,255,.08); backdrop-filter: blur(18px); animation: arrive 900ms cubic-bezier(.2,.8,.2,1) both; }
+      main::before { content: ""; position: absolute; top: -100px; right: -90px; width: 250px; height: 250px; border-radius: 50%; background: #6366f1; filter: blur(100px); opacity: .24; }
+      .eyebrow { position: relative; display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1.5rem; color: #a5b4fc; font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+      .eyebrow::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: #67e8f9; box-shadow: 0 0 14px #67e8f9; }
+      h1 { position: relative; margin: 0; font-size: clamp(3.25rem, 11vw, 6rem); line-height: .98; letter-spacing: -.075em; }
+      h1 span { display: block; color: transparent; background: linear-gradient(100deg, #a5b4fc 5%, #67e8f9 85%); background-clip: text; -webkit-background-clip: text; }
+      .message { position: relative; max-width: 34rem; margin: 1.75rem 0 0; color: #cbd5e1; font-size: clamp(1rem, 2.5vw, 1.15rem); line-height: 1.75; }
+      .signature { position: relative; display: flex; align-items: center; gap: .75rem; margin-top: 2.5rem; color: #94a3b8; font-size: .85rem; }
+      .signature::before { content: ""; width: 2rem; height: 1px; background: linear-gradient(90deg, #818cf8, #22d3ee); }
+      nav { position: relative; display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2rem; }
+      nav a { padding: .65rem .95rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; color: #cbd5e1; font-size: .85rem; text-decoration: none; transition: border-color 180ms ease, color 180ms ease, background 180ms ease; }
+      nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { border-color: rgba(103,232,249,.5); color: #fff; background: rgba(103,232,249,.08); }
+      @keyframes arrive { from { opacity: 0; transform: translateY(18px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; } }
+    </style>
+  </head>
+  <body>
+    <div class="orb" aria-hidden="true"></div>
+    <main>
+      <p class="eyebrow">The story so far</p>
+      <h1>A little <span>about</span></h1>
+      <p class="message">Every great idea starts somewhere. This tiny site began with two words—“Hello, World!”—and grew into a welcoming place to share a little more.</p>
+      <p class="message">It’s a simple starting point: a few pages, a bit of color, and room to make it your own.</p>
+      <div class="signature">Curiosity looks good on you</div>
+      <nav aria-label="Main navigation">
+        <a href="hello-world.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </main>
+  </body>
+</html>
